@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Ex_1 {
     public static void main(String[] args) {
-        int[] array1 = new int[]{1,2,3,4,3};
-        int[] array2 = new int[]{5,4,2,2,1};
-        int divSum = divisionSum(array1, array2);
+        double[] array1 = new double[]{1,2,3,4,3};
+        double[] array2 = new double[]{5,4,2,2,1};
+        double divSum = divisionSum(array1, array2);
         System.out.println(divSum);
 
         String[] array3 = new String[]{"h", "e", "l", "l", "o"};
@@ -15,11 +15,11 @@ public class Ex_1 {
         System.out.println(word);
     }
 
-    public static int divisionSum(int[] arr1, int[] arr2) {
+    public static double divisionSum(double[] arr1, double[] arr2) {
         if (arr1.length != arr2.length) {
             throw new RuntimeException("Length of arr1 and arr2 are not equal");
         }
-        int res = 0;
+        double res = 0;
         for (int i = 0; i < arr1.length; i++) {
             if (arr2[i] == 0) {
                 throw new RuntimeException("Elements in array2 == 0. Division by zero is impossible");

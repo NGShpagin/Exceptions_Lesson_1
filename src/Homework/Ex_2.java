@@ -7,7 +7,7 @@ package Homework;
 public class Ex_2 {
     public static void main(String[] args) {
        String[][] array = new String[][]{
-               {"2", "5", "3", "5", "6"},
+               {"2", "/", "3", "5", "6"},
                {"2", "4", "3", "5", "6"},
                {"4", "4", "3", "5", "6"},
                {"5", "4", "3", "5", "6"},
@@ -26,8 +26,8 @@ public class Ex_2 {
                 if (arr[i][j] == null || arr[i][j].equals("")) {
                     throw new NumberFormatException("Array contains empty elements or null");
                 }
-                if (arr[i][j].matches("[a-zA-Zа-яА-я]+")) {
-                    throw new NumberFormatException("Array contains elements with letters");
+                if (!arr[i][j].matches("[0-9]+")) {
+                    throw new NumberFormatException("Array contains elements, which are not numbers");
                 }
                 //#endregion
                 int val = Integer.parseInt(arr[i][j]);
